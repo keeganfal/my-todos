@@ -13,6 +13,10 @@ function App() {
     <ListItem key={index} listName={list}/>
   ));
 
+  const handleReset = () => {
+    setItems([]);
+  };
+
   const handleInput = (e) => {
     e.preventDefault();
     setItems([...item, e.target[0].value]);
@@ -24,7 +28,7 @@ function App() {
     <div className="App">
       <h1 className="header">My Todos</h1>
 
-      <Button label="Reset"></Button>
+      <Button label="Reset" onClick={handleReset}></Button>
       
       <br />
       <Input searchTerm={item} handleInput={handleInput}></Input>
