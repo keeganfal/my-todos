@@ -13,10 +13,15 @@ const ListItem = ({ listName }) => {
     }
   }
 
+  const handleDelete = () => {
+    
+  }
+
   return (
     <div className={done}>
       <p>{listName}</p>
       <input type="checkbox" onClick={handleCheckbox} />
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
