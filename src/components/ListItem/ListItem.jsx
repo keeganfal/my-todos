@@ -1,7 +1,7 @@
 import "./ListItem.scss";
 import { useState } from "react";
 
-const ListItem = ({ listName }) => {
+const ListItem = ({ listName, handleDelete }) => {
   const [done, setDone] = useState("listItem");
 
   const handleCheckbox = () => {
@@ -13,15 +13,11 @@ const ListItem = ({ listName }) => {
     }
   }
 
-  const handleDelete = () => {
-    
-  }
-
   return (
     <div className={done}>
       <input type="checkbox" onClick={handleCheckbox} />
       <p>{listName}</p>
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={() => handleDelete(listName)}>Delete</button>
     </div>
   );
 };

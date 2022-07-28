@@ -8,9 +8,15 @@ import { useState } from 'react';
 function App() {
 
   const [item, setItems] = useState([]);
-  
+
+  const handleDelete = (listName) => {
+    setItems(item.filter(filterItem => {
+      return (filterItem != listName);
+    }));
+  }
+
   const listItemsJSX = item.map((list, index) => (
-    <ListItem key={index} listName={list}/>
+    <ListItem key={index} listName={list} handleDelete={handleDelete}/>
   ));
 
   const handleReset = () => {
@@ -22,16 +28,12 @@ function App() {
     setItems([...item, e.target[0].value]);
   };
 
-  console.log(listItemsJSX);
-
   return (
     <div className="App">
       <section className="header">
         <h1 className="header__name">My Todos</h1>
         <Button label="Reset" onClick={handleReset}></Button>
       </section>
-      
-
       
       <Input handleInput={handleInput}></Input>
 

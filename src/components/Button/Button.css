@@ -1,11 +1,8 @@
 .button {
-  border: none;
+  border: 0.15em solid black;
   cursor: pointer;
-  background-color: gray;
+  background-color: transparent;
   border-radius: 0.625rem;
   padding: 0.5rem 2rem;
   transition: all 0.1s ease-in-out;
-}
-.button:hover {
-  background-color: #737373;
 }
