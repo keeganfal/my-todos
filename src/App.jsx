@@ -26,11 +26,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="header">My Todos</h1>
-
-      <Button label="Reset" onClick={handleReset}></Button>
+      <section className="header">
+        <h1 className="header__name">My Todos</h1>
+        <Button label="Reset" onClick={handleReset}></Button>
+      </section>
       
-      <br />
+
+      
       <Input handleInput={handleInput}></Input>
 
       <div className="list-items">

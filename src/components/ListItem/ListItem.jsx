@@ -19,8 +19,8 @@ const ListItem = ({ listName }) => {
 
   return (
     <div className={done}>
-      <p>{listName}</p>
       <input type="checkbox" onClick={handleCheckbox} />
+      <p>{listName}</p>
       <button onClick={handleDelete}>Delete</button>
     </div>
   );

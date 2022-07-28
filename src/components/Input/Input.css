@@ -1,0 +1,13 @@
+.input-form {
+  border: 0.125em solid black;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.input-form .input {
+  border: none;
+}
+.input-form .input:focus {
+  border: none;
+}
