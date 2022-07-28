@@ -31,7 +31,7 @@ function App() {
       <Button label="Reset" onClick={handleReset}></Button>
       
       <br />
-      <Input searchTerm={item} handleInput={handleInput}></Input>
+      <Input handleInput={handleInput}></Input>
 
       <div className="list-items">
         {listItemsJSX}
